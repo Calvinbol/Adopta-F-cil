@@ -5,8 +5,14 @@ const Adoption = require ('../api/models/adoption.model.js')
 
 
 const initRelationships = () => {
-  console.log('Chachi')
-  
+ Hostel.hasMany(Pet, {onDelete: 'CASCADE', onUpdate: 'CASCADE'})
+ Pet.belongsTo(Hostel) 
+
+ Hostel.hasMany(Adoption, { onDelete: "CASCADE", onUpdate: "CASCADE" });
+Adoption.belongsTo(Hostel)
+
+Pet.hasOne(Adoption, { onDelete: "CASCADE", onUpdate: "CASCADE" });
+Adoption.belongsTo(Pet)
 }
 
 module.exports = {
