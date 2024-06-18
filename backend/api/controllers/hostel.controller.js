@@ -1,86 +1,86 @@
 const db = require('../models');
-const User = db.user;
 const bcrypt = require('bcrypt');
+const Hostel = require('../models/hostel.model');
 
 // CREA ALBERGUE (POST)
 
-const createUser = async (req, res) => {
+const createHostel = async (req, res) => {
     try {
         req.body.password = bcrypt.hashSync(req.body.password, 10);
-        const user = await User.create(req.body);
-        return res.status(201).json(user);
+        const hostel = await Hostel.create(req.body);
+        return res.status(201).json(hostel);
     } catch (error) {
         console.log(error);
-        return res.status(500).send('>> Oops something went wrong, could not create user.');
+        return res.status(500).send('>> Oops something went wrong, could not create hostel.');
     }
 };
 
 // OBTENER TODOS LOS ALBERGUES (GET)
 
-const getUsers = async (req, res) => {
+const getHostels = async (req, res) => {
     try {
-        const users = await User.findAll();
-        return res.status(200).json(users);
+        const hostels = await Hostel.findAll();
+        return res.status(200).json(hostels);
     } catch (error) {
         console.log(error);
-        return res.status(500).send('>> Oops something went wrong, could not fetch users.');
+        return res.status(500).send('>> Oops something went wrong, could not fetch hostels.');
     }
 };
 
 // OBTIENE ALBERGUE POR ID 
 
-const getUserById = async (req, res) => {
+const getHostelById = async (req, res) => {
     try {
-        const user = await User.findByPk(req.params.id);
-        if (user) {
-            return res.status(200).json(user);
+        const hostel = await Hostel.findByPk(req.params.id);
+        if (hostel) {
+            return res.status(200).json(hostel);
         } else {
-            return res.status(404).send('>> User not found.');
+            return res.status(404).send('>> hostel not found.');
         }
     } catch (error) {
         console.log(error);
-        return res.status(500).send('>> Oops something went wrong, could not fetch user.');
+        return res.status(500).send('>> Oops something went wrong, could not fetch hostel.');
     }
 };
 
 // ACTUALIZA ALBERGUE 
 
-const updateUser = async (req, res) => {
+const updateHostel = async (req, res) => {
     try {
-        const user = await User.findByPk(req.params.id);
-        if (user) {
-            await user.update(req.body);
-            return res.status(200).json(user);
+        const hostel = await Hostel.findByPk(req.params.id);
+        if (hostel) {
+            await hostel.update(req.body);
+            return res.status(200).json(hostel);
         } else {
-            return res.status(404).send('>> User not found.');
+            return res.status(404).send('>> hostel not found.');
         }
     } catch (error) {
         console.log(error);
-        return res.status(500).send('>> Oops something went wrong, could not update user.');
+        return res.status(500).send('>> Oops something went wrong, could not update hostel.');
     }
 };
 
 // BORRA ALBERGUE
 
-const deleteUser = async (req, res) => {
+const deleteHostel = async (req, res) => {
     try {
-        const user = await User.findByPk(req.params.id);
-        if (user) {
-            await user.destroy();
+        const hostel = await Hostel.findByPk(req.params.id);
+        if (hostel) {
+            await hostel.destroy();
             return res.status(204).send();
         } else {
-            return res.status(404).send('>> User not found.');
+            return res.status(404).send('>> hostel not found.');
         }
     } catch (error) {
         console.log(error);
-        return res.status(500).send('>> Oops something went wrong, could not delete user.');
+        return res.status(500).send('>> Oops something went wrong, could not delete hostel.');
     }
 };
 
 module.exports = {
-    createUser,
-    getUsers,
-    getUserById,
-    updateUser,
-    deleteUser
+    createHostel,
+    getHostels,
+    getHostelById,
+    updateHostel,
+    deleteHostel
 };

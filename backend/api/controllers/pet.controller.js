@@ -1,6 +1,4 @@
-const db = require('../models');
-const Pet = db.pet;
-
+const Pet = require('../models/pet.models')
 
 // CREA MASCOTA (POST)
 

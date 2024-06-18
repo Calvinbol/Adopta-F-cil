@@ -5,6 +5,6 @@ const petRoutes = require('./pet.route.js');
 
 
 router.use('/auth', authRoutes);
-router.use('/pets', petRoutes);
+router.use('/pet', petRoutes);
 
 module.exports = router;
