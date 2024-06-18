@@ -25,6 +25,8 @@ const Hostel = sequelize.define('hostel', {
   autonomous_community: {
     type: DataTypes.STRING,
   },
-})
+},
+  { timestamps: false }
+)
 
 module.exports = Hostel

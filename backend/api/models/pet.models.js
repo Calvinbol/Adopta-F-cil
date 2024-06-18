@@ -29,6 +29,10 @@ const Pet = sequelize.define('pet', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-})
+
+    },
+    {timestamps: false}
+    
+)
 
 module.exports = Pet
