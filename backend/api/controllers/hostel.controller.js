@@ -1,4 +1,4 @@
-const db = require('../models');
+
 const bcrypt = require('bcrypt');
 const Hostel = require('../models/hostel.model');
 
