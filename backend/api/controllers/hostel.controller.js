@@ -2,7 +2,7 @@ const db = require('../models');
 const User = db.user;
 const bcrypt = require('bcrypt');
 
-// CREA USUARIO (POST)
+// CREA ALBERGUE (POST)
 
 const createUser = async (req, res) => {
     try {
@@ -15,7 +15,7 @@ const createUser = async (req, res) => {
     }
 };
 
-// OBTENER TODOS LOS USUARIOS (GET)
+// OBTENER TODOS LOS ALBERGUES (GET)
 
 const getUsers = async (req, res) => {
     try {
@@ -27,7 +27,7 @@ const getUsers = async (req, res) => {
     }
 };
 
-// OBTIENE USUARIO POR ID 
+// OBTIENE ALBERGUE POR ID 
 
 const getUserById = async (req, res) => {
     try {
@@ -43,7 +43,7 @@ const getUserById = async (req, res) => {
     }
 };
 
-// ACTUALIZA USUARIO 
+// ACTUALIZA ALBERGUE 
 
 const updateUser = async (req, res) => {
     try {
@@ -60,7 +60,7 @@ const updateUser = async (req, res) => {
     }
 };
 
-// BORRA USUARIO 
+// BORRA ALBERGUE
 
 const deleteUser = async (req, res) => {
     try {

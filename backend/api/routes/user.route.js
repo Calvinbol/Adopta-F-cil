@@ -1,4 +1,4 @@
-const { getUsers } = require('../../controllers/user.controller')
+const { getUsers } = require('../../api/controllers/hostel.controller')
 const { checkAuth } = require('../../middlewares/auth.middlewares')
 
 const router = require('express').Router()
