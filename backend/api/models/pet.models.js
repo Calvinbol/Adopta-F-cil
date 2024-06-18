@@ -7,7 +7,7 @@ const Pet = sequelize.define('pet', {
         allowNull: false,
     },
     type: {
-        type: DataTypes.ENUM('dogs', 'cats'),
+        type: DataTypes.ENUM('dog', 'cat'),
         allowNull: false,
     },
     race: {
@@ -15,7 +15,7 @@ const Pet = sequelize.define('pet', {
         allowNull: false,
     },
     age: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
     },
     gender: {
         type: DataTypes.ENUM('famale', 'male'),
@@ -26,7 +26,7 @@ const Pet = sequelize.define('pet', {
         allowNull: false,
     },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
 
