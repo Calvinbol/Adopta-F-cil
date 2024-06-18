@@ -1,5 +1,5 @@
-const { DataTypes } = requiere('sequelize')
-const sequelize = requiere('../../db')
+const { DataTypes } = require('sequelize')
+const sequelize = require('../../db')
 
 const Hostel = sequelize.define('hostel', {
   name: {
@@ -7,23 +7,23 @@ const Hostel = sequelize.define('hostel', {
     allowNull: false,
   },
   address: {
-    type: DataTypes.VARCHAR,
+    type: DataTypes.STRING,
   },
   phone: {
-    type: DataTypes.VARCHAR,
+    type: DataTypes.STRING,
   },
   email: {
-    type: DataTypes.VARCHAR,
+    type: DataTypes.STRING,
   },
   website: {
-    type: DataTypes.VARCHAR,
+    type: DataTypes.STRING,
   },
   description: {
     type: DataTypes.STRING,
     allowNull: false,
   },
   autonomous_community: {
-    type: DataTypes.VARCHAR,
+    type: DataTypes.STRING,
   },
 })
 

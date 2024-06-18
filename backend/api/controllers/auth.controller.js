@@ -1,5 +1,4 @@
-const db = require('../models');
-const User = db.user;
+const Hostel = require('../models/hostel.model')
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -10,9 +9,9 @@ const jwt = require('jsonwebtoken');
 const signUp = async (req, res) => {
   try {
     req.body.password = bcrypt.hashSync(req.body.password, 10);
-    const user = await User.create(req.body);
+    const hostel = await Hostel.create(req.body);
 
-    const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ email: hostel.email }, process.env.JWT_SECRET, {
       expiresIn: '1y'
     });
 
@@ -31,33 +30,33 @@ const signUp = async (req, res) => {
 
 const logIn = async (req, res) => {
   try {
-    const user = await User.findOne({ where: { email: req.body.email } });
-    const userDetails = {
+    const hostel = await hostel.findOne({ where: { email: req.body.email } });
+    const hostelDetails = {
       token: '',
       name: '',
     };
-    if (user) {
-      const result = bcrypt.compareSync(req.body.password, user.password);
+    if (hostel) {
+      const result = bcrypt.compareSync(req.body.password, hostel.password);
       if (result) {
-        const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET, {
+        const token = jwt.sign({ email: hostel.email }, process.env.JWT_SECRET, {
           expiresIn: '1y'
         });
-        userDetails.token = token;
-        userDetails.name = user.name;
-        return res.status(200).json({ userDetails });
+        hostelDetails.token = token;
+        hostelDetails.name = hostel.name;
+        return res.status(200).json({ hostelDetails });
       }
       return res
         .status(400)
-        .send('>> Oops something went wrong, user or password incorrect.');
+        .send('>> Oops something went wrong, hostel or password incorrect.');
     } else {
       return res
         .status(400)
-        .send('>> Oops something went wrong, user or password incorrect.');
+        .send('>> Oops something went wrong, hostel or password incorrect.');
     }
   } catch (error) {
     return res
       .status(400)
-      .send('>> Oops something went wrong, user or password incorrect.');
+      .send('>> Oops something went wrong, hostel or password incorrect.');
   }
 };
 
