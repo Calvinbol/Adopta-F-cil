@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { login } from '../Services/auth.service'
-//import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function LoginForm() {
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
     const [errs, setErrs] = useState('') //Para mostrar si hay algún error
- /*    const navigate = useNavigate() */
+  const navigate = useNavigate()
 
     async function handleClick(event) {
         event.preventDefault()
@@ -24,31 +24,38 @@ function LoginForm() {
     }
 
     return (
-        <>
-            <form className='form'>
-                <input
-                    className='email'
-                    placeholder='Introduce tu email'
-                    type='email'
-                    onChange={function (event) {
-                        setEmail(event.target.value)
-                    }}
-                />
+      <>
+        <form className="form">
+          <input
+            className="email"
+            placeholder="Introduce tu email"
+            type="email"
+            onChange={function (event) {
+              setEmail(event.target.value);
+            }}
+          />
 
-                <input
-                    placeholder='Introduce tu contraseña'
-                    type='password'
-                    onChange={function (event) {
-                        setPassword(event.target.value)
-                    }}
-                />
+          <input
+            placeholder="Introduce tu contraseña"
+            type="password"
+            onChange={function (event) {
+              setPassword(event.target.value);
+            }}
+          />
 
-                {errs && <p className='error'>{errs}</p>}
+          {errs && <p className="error">{errs}</p>}
 
-                <button onClick={handleClick}>Enviar</button>
-            </form>
-        </>
-    )
+          <button onClick={handleClick}>Enviar</button>
+        </form>
+        <button
+          onClick={function () {
+            navigate("/");
+          }}
+        >
+          VOLVER A HOME
+        </button>
+      </>
+    );
 }
 
 export default LoginForm

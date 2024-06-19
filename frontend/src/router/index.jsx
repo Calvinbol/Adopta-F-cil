@@ -1,4 +1,4 @@
-import { createBrowserRouter, redirect } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 import Layout from '../Layouts/Layout'
 import Signup from '../pages/Signup/Signup'
