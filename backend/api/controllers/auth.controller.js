@@ -31,19 +31,13 @@ const signUp = async (req, res) => {
 const logIn = async (req, res) => {
   try {
     const hostel = await hostel.findOne({ where: { email: req.body.email } });
-    const hostelDetails = {
-      token: '',
-      name: '',
-    };
     if (hostel) {
       const result = bcrypt.compareSync(req.body.password, hostel.password);
       if (result) {
         const token = jwt.sign({ email: hostel.email }, process.env.JWT_SECRET, {
           expiresIn: '1y'
         });
-        hostelDetails.token = token;
-        hostelDetails.name = hostel.name;
-        return res.status(200).json({ hostelDetails });
+        return res.status(200).json({ hostel });
       }
       return res
         .status(400)

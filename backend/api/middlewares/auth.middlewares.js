@@ -11,9 +11,9 @@ function checkAuth(req, res, next) {
     async (err, result) => {
       if (err) return res.status(401).send('Token not valid')
       const user = await Hostel.findOne({email: result.email})
-      if (!hostel) return res.status(401).send('hostel not found')
+      if (!Hostel) return res.status(401).send('hostel not found')
 
-      res.locals.hostel = hostel
+      res.locals.hostel = Hostel
 
       next()
     }
