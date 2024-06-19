@@ -3,10 +3,11 @@ const sequelize = require("../../db");
 
 const Adoption = sequelize.define("adoption", {
   date_adoption: {
-    type: DataTypes.DATE,
+    type: DataTypes.STRING,
   },
 },
   { timestamps: false }
+  
 );
 
 module.exports = Adoption;
