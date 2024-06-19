@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import './App.css'
+import { useNavigate } from 'react-router-dom'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const navigate = useNavigate()
 
   return (
     <>
-   
+      <button onClick={function () { navigate('/login') }}>Login</button>
+      <button onClick={function () { navigate('/signup') }}>Signup</button>
     </>
   )
 }
