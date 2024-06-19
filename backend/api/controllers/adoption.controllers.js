@@ -49,7 +49,6 @@ const getAdoptionById = async (req, res) => {
 };
 
 // ACTUALIZA UNA ADOPCIÓN
-
 const updateAdoption = async (req, res) => {
   try {
     const adoption = await Adoption.findByPk(req.params.id);
