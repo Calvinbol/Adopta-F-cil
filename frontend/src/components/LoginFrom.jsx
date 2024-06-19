@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { login } from '../Services/auth.service'
 import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 function LoginForm() {
     const [password, setPassword] = useState('')
