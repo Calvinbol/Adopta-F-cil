@@ -17,7 +17,7 @@ function LoginForm() {
             console.log(response.name)
             localStorage.setItem('token', response.token)
             toast.success('Hello World ' + response.name)
-        /*     navigate('/') */
+            navigate('/') 
         } catch (error) {
             setErrs(error.message)
         }
