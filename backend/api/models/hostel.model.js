@@ -12,18 +12,36 @@ const Hostel = sequelize.define('hostel', {
   phone: {
     type: DataTypes.STRING,
   },
+
   email: {
     type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+    validate: {
+      isEmail: true,
+    },
   },
-  website: {
-    type: DataTypes.STRING,
-  },
-  description: {
+
+  password: {
     type: DataTypes.STRING,
     allowNull: false,
-  },
-  autonomous_community: {
-    type: DataTypes.STRING,
+    validate: {
+      is: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
+      //validation: pass with at least 8 char: 1 caracter especial, 1 minuscula, 1 mayus
+    },
+
+    website: {
+      type: DataTypes.STRING,
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    autonomous_community: {
+      type: DataTypes.STRING,
+    },
+
+
   },
 },
   { timestamps: false }

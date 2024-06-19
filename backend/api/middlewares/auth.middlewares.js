@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const User = require('../models/user.model')
+const Hostel = require('../models/hostel.model')
 
 function checkAuth(req, res, next) {
   console.log(req)
@@ -10,10 +10,10 @@ function checkAuth(req, res, next) {
     process.env.JWT_SECRET,
     async (err, result) => {
       if (err) return res.status(401).send('Token not valid')
-      const user = await User.findOne({email: result.email})
-      if (!user) return res.status(401).send('User not found')
+      const user = await Hostel.findOne({email: result.email})
+      if (!hostel) return res.status(401).send('hostel not found')
 
-      res.locals.user = user
+      res.locals.hostel = hostel
 
       next()
     }
