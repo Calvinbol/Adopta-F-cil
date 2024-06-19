@@ -22,7 +22,7 @@ export async function login(email, password) {
             email: email,
             password: password
         })
-        return data //TENEMOS QUE CREAR hostelDatails?
+        return data 
     } catch (error) {
         throw new Error('User or password is incorrect')
     }
