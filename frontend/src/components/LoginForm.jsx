@@ -1,8 +1,7 @@
 import { useContext, useState } from 'react'
 import { login } from '../Services/auth.service'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
-import '../App.css'
 import { HostelContext } from '../context/hostelContext'
 
 
@@ -22,10 +21,6 @@ function LoginForm() {
             console.log(response.name)
             localStorage.setItem('token', response.token)
             setHostel(response.hostel)
-
-
-            
-
             toast.success('Hello World ' + response.name)
             navigate('/') 
         } catch (error) {
