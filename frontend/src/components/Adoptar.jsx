@@ -1,12 +1,11 @@
 import React from 'react';
+import './Adoptar.css'
 
 const Adoptar = () => {
     return (
-        <div>
-            <h2>Adoptar es</h2>
-            <p>Adoptar un animal es un acto de amor y responsabilidad...</p>
-            {/* Añade más contenido JENNI */}
-        </div>
+      <div className="adoptar-background">
+        
+      </div>
     );
 };
 
