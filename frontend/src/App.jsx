@@ -1,17 +1,25 @@
-import { useState } from 'react'
-import './App.css'
-import { useNavigate } from 'react-router-dom'
 
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./Layouts/Layout";
+import Adoptar from "./components/Adoptar";
+import Mascotas from "./components/Mascotas";
+import Contacto from "./components/Contacto";
+import Albergue from "./components/Albergue";
 
-function App() {
-  const navigate = useNavigate()
-
+const App = () => {
   return (
-    <>
-      <button onClick={function () { navigate('/login') }}>Login</button>
-      <button onClick={function () { navigate('/signup') }}>Signup</button>
-    </>
-  )
-}
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Adoptar />} />
+          <Route path="/mascotas" element={<Mascotas />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/albergue" element={<Albergue />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
+};
 
-export default App
+export default App;
