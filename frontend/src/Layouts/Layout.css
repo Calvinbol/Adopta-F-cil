@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
+    margin: 0%;
 }
 
 header {
@@ -8,12 +9,11 @@ header {
     color: #fff;
     padding: 10px 20px;
     top: 0;
-    width: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+
 }
 
 .logo img {
@@ -62,18 +62,14 @@ nav ul li a:hover {
 }
 
 .footer {
-    background-color: hwb(0 100% 0%);
     position: absolute;
-    width: 20%;
-}
+    background-position: cover;
 
-footer p {
-    margin: 0;
 }
 
 main {
     padding: 80px 20px 40px 20px;
-    /* Ajusta el padding para considerar el espacio de header y footer fijos */
+    /* JENNI este Ajusta el padding para considerar el espacio de header y footer fijos */
     min-height: calc(100vh - 120px);
-    /* Altura mínima ajustada para considerar el espacio del header y footer */
+    /* JENNI este es Altura mínima ajustada para considerar el espacio del header y footer */
 }

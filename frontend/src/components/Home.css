@@ -1,6 +1,9 @@
 .home-background {
     height: calc(100vh - 120px);
     background-image: url('../../public/HomeBackground.png');
-    background-size: cover;
+    background-position: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    overflow: hidden;
+
 }

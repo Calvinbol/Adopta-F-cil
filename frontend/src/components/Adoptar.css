@@ -1,5 +1,9 @@
 .adoptar-background {
     height: calc(100vh - 120px);
     background-image: url('../../public/AdoptarEs.png');
+    background-position: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
 
 }
