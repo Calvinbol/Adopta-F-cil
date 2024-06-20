@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { login } from '../Services/auth.service'
 import { Link, useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
+import '../App.css'
+
 
 function LoginForm() {
     const [password, setPassword] = useState('')

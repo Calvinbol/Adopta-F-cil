@@ -1,11 +1,10 @@
 import React from 'react';
+import Login from '../pages/Login/Login';
 
 const Albergue = () => {
     return (
         <div>
-            <h2>Soy un albergue</h2>
-            <p>Si eres un albergue y quieres colaborar con nosotros...</p>
-            {/* Añade más contenido JENNI */}
+            <Login/>
         </div>
     );
 };
