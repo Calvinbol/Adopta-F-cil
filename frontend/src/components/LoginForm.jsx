@@ -24,6 +24,10 @@ function LoginForm() {
             setHostel(response.hostel)
 
 
+            console.log(hostel)
+
+
+
             
 
             toast.success('Hello World ' + response.name)
