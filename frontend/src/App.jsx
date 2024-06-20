@@ -9,7 +9,15 @@ import Albergue from "./components/Albergue";
 
 const App = () => {
   return (
-    <Router>
+    <>
+    </>
+  );
+};
+
+export default App;
+
+{
+  /* <Router>
       <Layout>
         <Routes>
           <Route path="/" element={<Adoptar />} />
@@ -18,8 +26,5 @@ const App = () => {
           <Route path="/albergue" element={<Albergue />} />
         </Routes>
       </Layout>
-    </Router>
-  );
-};
-
-export default App;
+    </Router> */
+}

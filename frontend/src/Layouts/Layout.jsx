@@ -1,18 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Layout.css';
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <>
       <header>
         <div className="logo">
-          <img src="../../public/Logo.png" alt="Adopta Fácil" />
+          <Link to={'/'}>
+            <img src="../../public/Logo.png" alt="Adopta Fácil" />
+          
+          </Link>
         </div>
         <nav>
           <ul>
-            <li><Link to="/">Adoptar es</Link></li>
+            <li><Link to="/adoptar">Adoptar es</Link></li>
             <li><Link to="/mascotas">Mascotas</Link></li>
             <li><Link to="/contacto">Contáctanos</Link></li>
           </ul>
@@ -22,7 +25,7 @@ const Layout = ({ children }) => {
         </div>
       </header>
       <main>
-        {children}
+        <Outlet/>
       </main>
       <footer>
         <div className="footer">
