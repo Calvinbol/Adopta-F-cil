@@ -25,7 +25,6 @@ const signUp = async (req, res) => {
   }
 };
 
-
 // CONTROLA EL LOGING (INICIO SESION)
 
 const logIn = async (req, res) => {
@@ -36,8 +35,8 @@ const logIn = async (req, res) => {
       if (result) {
         const token = jwt.sign({ email: hostel.email }, process.env.JWT_SECRET, {
           expiresIn: '1y'
-        });
-        return res.status(200).json({ hostel });
+        })
+        return res.status(200).json({ message: 'Logged', token, hostel });
       }
       return res
         .status(400)

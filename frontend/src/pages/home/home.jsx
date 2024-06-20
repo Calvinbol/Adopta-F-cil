@@ -1,8 +1,18 @@
-import React from 'react'
+import { useState } from 'react'
+import { HostelContext } from "./context/hostelContext.js";
+
+
 
 function home() {
+  const [hostel, setHostel] = useState('')
+
+
   return (
-    <div>home</div>
+    <>
+      <HostelContext.Provider value = {{hostel, setHostel}}>
+
+      </HostelContext.Provider>
+    </>
   )
 }
 
