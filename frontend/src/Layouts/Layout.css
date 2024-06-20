@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #004AAD;
+    color: #fff;
+    padding: 10px 20px;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 100px;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.albergue-link {
+    text-align: right;
+}
+
+.albergue-link a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.albergue-link a:hover {
+    color: #ffcc00;
+}
+
+.footer {
+    background-color: hwb(0 100% 0%);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+}
+
+footer p {
+    margin: 0;
+}
+
+main {
+    padding: 80px 20px 40px 20px;
+    /* Ajusta el padding para considerar el espacio de header y footer fijos */
+    min-height: calc(100vh - 120px);
+    /* Altura mínima ajustada para considerar el espacio del header y footer */
+}
