@@ -1,7 +1,5 @@
 .adoptar-background {
     height: calc(100vh - 120px);
     background-image: url('../../public/AdoptarEs.png');
-    background-size: cover;
-    background-position: center;
 
 }

@@ -1,5 +1,4 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
 }
@@ -64,9 +63,8 @@ nav ul li a:hover {
 
 .footer {
     background-color: hwb(0 100% 0%);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: absolute;
+    width: 20%;
 }
 
 footer p {
