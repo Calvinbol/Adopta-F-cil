@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { login } from '../Services/auth.service'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
 
 function LoginForm() {
@@ -26,7 +26,9 @@ function LoginForm() {
 
     return (
       <>
-        <form className="form">
+        <form className="form"> 
+        <label className='inicio'>Iniciar Sesion</label>
+          <label>Correo Electronico:</label>
           <input
             className="email"
             placeholder="Introduce tu email"
@@ -35,8 +37,10 @@ function LoginForm() {
               setEmail(event.target.value);
             }}
           />
-
+           
+           <label>Contraseña:</label>
           <input
+          className='pass'
             placeholder="Introduce tu contraseña"
             type="password"
             onChange={function (event) {
@@ -46,15 +50,9 @@ function LoginForm() {
 
           {errs && <p className="error">{errs}</p>}
 
-          <button onClick={handleClick}>Enviar</button>
+          <button className="ingresa" onClick={handleClick}>Ingresa</button>
         </form>
-        <button
-          onClick={function () {
-            navigate("/");
-          }}
-        >
-          VOLVER A HOME
-        </button>
+       
       </>
     );
 }
