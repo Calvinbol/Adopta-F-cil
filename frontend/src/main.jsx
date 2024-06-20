@@ -5,12 +5,14 @@ import './index.css'
 
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router/index.jsx'
+import HostelProvider from './context/HostelProvider.jsx'
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-    <RouterProvider router={router}/>
+    <HostelProvider>
+      <RouterProvider router={router}/>
+    </HostelProvider>
   </React.StrictMode>,
 )

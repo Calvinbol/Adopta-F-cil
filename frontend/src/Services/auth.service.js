@@ -21,6 +21,7 @@ export async function login(email, password) {
         })
         return data 
     } catch (error) {
+        console.log(error.response)
         throw new Error('User or password is incorrect')
     }
 }

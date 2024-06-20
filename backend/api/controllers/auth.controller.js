@@ -29,7 +29,7 @@ const signUp = async (req, res) => {
 
 const logIn = async (req, res) => {
   try {
-    const hostel = await hostel.findOne({ where: { email: req.body.email } });
+    const hostel = await Hostel.findOne({ where: { email: req.body.email } });
     if (hostel) {
       const result = bcrypt.compareSync(req.body.password, hostel.password);
       if (result) {

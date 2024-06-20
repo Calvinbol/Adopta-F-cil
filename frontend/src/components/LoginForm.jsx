@@ -21,6 +21,10 @@ function LoginForm() {
             console.log(response.name)
             localStorage.setItem('token', response.token)
             setHostel(response.hostel)
+
+
+            
+
             toast.success('Hello World ' + response.name)
             navigate('/') 
         } catch (error) {
