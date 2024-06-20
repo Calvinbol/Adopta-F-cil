@@ -10,7 +10,6 @@ const Layout = () => {
         <div className="logo">
           <Link to={'/'}>
             <img src="../../public/Logo.png" alt="Adopta Fácil" />
-          
           </Link>
         </div>
         <nav>
@@ -25,7 +24,7 @@ const Layout = () => {
         </div>
       </header>
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
       <footer>
         <div className="footer">
