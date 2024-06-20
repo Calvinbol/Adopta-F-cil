@@ -1,12 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
-import App from '../App'
 import Home from '../components/Home'
 import Layout from '../Layouts/Layout'
 import Signup from '../pages/Signup/Signup'
-import LoginForm from '../components/LoginFrom'
 import Mascotas from '../components/Mascotas'
 import Contacto from '../components/Contacto'
 import Adoptar from '../components/Adoptar'
+import Login from '../pages/Login/Login'
 
 
 export const router = createBrowserRouter([
@@ -24,7 +23,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <LoginForm />,
+        element: <Login />,
       },
       {
         path: "/mascotas",
@@ -38,10 +37,7 @@ export const router = createBrowserRouter([
         path: "/adoptar",
         element: <Adoptar/>
       },
-      {
-        path: "/login",
-        element: ''
-      }
+ 
     ],
   },
 ]);

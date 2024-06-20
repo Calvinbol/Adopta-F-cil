@@ -21,7 +21,7 @@ const Layout = () => {
           </ul>
         </nav>
         <div className="albergue-link">
-          <Link to="/albergue">Soy un albergue</Link>
+          <Link to="/login">Soy un albergue</Link>
         </div>
       </header>
       <main>
