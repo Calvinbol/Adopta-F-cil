@@ -13,7 +13,7 @@ const Mascotas = () => {
                 </div>
                 <div className="mascota-card">
                     <img src="../../public/gatos.png" alt="Gatos" />
-                    <Link to="/gatos" className="mascota-link">Ver Gatos</Link> 
+                    <Link to="/gatos" className="mascota-link"> Gatos</Link> 
                 </div>
             </div>
             <button className="adopt-button">Ver todos</button>
