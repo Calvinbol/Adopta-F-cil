@@ -1,9 +1,58 @@
 .adoptar-background {
-    height: calc(100vh - 120px);
-    background-image: url('../../public/AdoptarEs.png');
-    background-position: cover;
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
+  display: flex;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+
+.container {
+  
+  width: 600px;
+  height: 425px;
+  background-color: #43a3b6;
+  border-radius: 15px; /* Ajusta este valor para cambiar la curvatura */
+  padding: 20px;
+  margin: 20px auto;
+}
+.container1{
+  width: 600px;
+  height: 425px;
+  background-color: #004aad;
+  border-radius: 15px; /* Ajusta este valor para cambiar la curvatura */
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.parrafo {
+  color: aliceblue;
+}
+ .textadoptar{
+text-align: center;
+font-size: 50px;
+
+ }
+ .textcontainer{
+  font-size: 30px;
+  padding-top: 20px;
+  border-left: auto;
+  border-right: auto;
+  color: aliceblue;
+  font-family: 'Open Sans', sans-serif;
+ }
+
+.iconperro{
+  height: 200px;
+  padding-left: 25px;
+  
+}
+.h4{
+  border-left: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-size-adjust: 200px;
+
 
 }
