@@ -9,14 +9,14 @@ const Mascotas = () => {
             <div className="mascotas-links">
                 <div className="mascota-card">
                     <img src="../../public/perros.png" alt="Perros" />
-                    <Link to="/frontend/src/components/DogsCard.jsx" className="mascota-link">Perros</Link>
+                    <Link to="/DogsCard" className="mascota-link">Perros</Link>
                 </div>
                 <div className="mascota-card">
                     <img src="../../public/gatos.png" alt="Gatos" />
-                    <Link to="/frontend/src/components/CatsCard.jsx" className="mascota-link">Gatos</Link> 
+                    <Link to="/CatsCard" className="mascota-link">Gatos</Link> 
                 </div>
             </div>
-            <button className="adopt-button">Ver todos</button>
+            <Link to="/TodasMascotas"  button className="adopt-button">Ver todos</Link>
         </div>
     );
 };
