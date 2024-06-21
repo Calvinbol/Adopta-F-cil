@@ -1,12 +1,9 @@
 import React from "react";
-import "./Home.css"; 
+import { Link } from "react-router-dom";
+import "./Home.css";
 
 const Home = () => {
-  const handleClick = () => {
-    
-   alert("Botón clickeado");
-    
-  };
+  
 
   return (
     <div className="home-background">
@@ -14,18 +11,16 @@ const Home = () => {
         <a className="greyFont">¡Dale una </a>
         <a className="blueBold">nueva </a>
         <p className="greyFont">oportunidad a un </p>
-        <a className="blueBold">Perro o Gato y</a>
+        <p className="blueBold">Perro o Gato y</p>
         <p className="greyFont">transforma tu vida!</p>
-        <p className="blueBold"></p>
 
-        {}
-        <button className="button" onClick={handleClick}>
-          Conoce a tu mejor amigo
-        </button>
+        <Link to="/Mascotas">
+          <button className="button">
+            Conoce a tu mejor amigo
+          </button>
+        </Link>
       </div>
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   );
 };

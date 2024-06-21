@@ -1,9 +1,8 @@
 .home-background {
     height: calc(100vh - 120px);
-    background-image: url('../../public/HomeBackground.png');
     background-position: cover;
     background-size: contain;
-    background-image: url('/home/reboot/code/Adopta-Facil/frontend/public/fondoBackground.jpg');
+    background-image: url('/home/reboot/code/Adopta-Facil/frontend/public/fondo-home2.png');
     position: relative;              
     background-size: cover;                                                                        
     background-position: center;
@@ -69,6 +68,7 @@
   border: none;
   cursor: pointer;
   border-radius: 20px;
+  font-weight: bold;
 }
 
 .button:hover {
