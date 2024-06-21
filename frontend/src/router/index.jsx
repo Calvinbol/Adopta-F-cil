@@ -45,14 +45,8 @@ export const router = createBrowserRouter([
         path: "/adoptar/:animal",
         element: <PetsView />
       },
-      {
-        path: "/catsCard",
-        element: <CatsCard />
-      },
-      {
-        path: "/adoptarmascotas",
-        element: <TodasMascotas />
-      },
+     
+
 
     ],
   },
