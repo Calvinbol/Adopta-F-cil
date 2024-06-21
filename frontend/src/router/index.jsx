@@ -6,6 +6,9 @@ import Mascotas from '../components/Mascotas'
 import Contacto from '../components/Contacto'
 import Adoptar from '../components/Adoptar'
 import Login from '../pages/Login/Login'
+import DogsCard from '../components/DogsCard'
+import CatsCard from '../components/CatsCard'
+import TodasMascotas from '../components/TodasMascotas'
 
 
 export const router = createBrowserRouter([
@@ -37,7 +40,19 @@ export const router = createBrowserRouter([
         path: "/adoptar",
         element: <Adoptar/>
       },
- 
+      {
+        path: "/dogsCard",
+        element: <DogsCard />
+      },
+      {
+        path: "/catsCard",
+        element: <CatsCard />
+      },
+      {
+        path: "/TodasMascotas",
+        element: <TodasMascotas />
+      },
+
     ],
   },
 ]);
