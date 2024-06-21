@@ -19,9 +19,6 @@ header {
 
 }
 
-.logo img {
-    height: 100px;
-}
 
 nav {
     flex-grow: 1;
@@ -64,21 +61,17 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
-.footer {
-
-    background-color: #d9d9d9;
-    min-width: 100vh;
-    min-height: 8vh;
+footer {
+  display: flex;
+  background-color: #D9D9D9;
+  width: 100vw;
+  color: #574757;
+  padding: 20px;
+  align-items: center;
+  text-decoration: underline;
 
 }
 
-main {
-    padding: 80px 20px 40px 20px;
-    /* Ajusta el padding para considerar el espacio de header y footer fijos */
-    min-height: calc(100vh - 120px);
-    /* Altura mínima ajustada para considerar el espacio del header y footer */
+.tamañoimagen{
+    width: 200px;
 }
-
-
-
-
