@@ -19,7 +19,7 @@ const Mascotas = () => {
                     Gatos</Link> 
                 </div>
             </div>
-            <Link to="/adoptar/animales"  button className="adopt-button">Ver todos</Link>
+            <Link to="/adoptarmascotas" button className="adopt-button">Ver todos</Link>
         </div>
     );
 };

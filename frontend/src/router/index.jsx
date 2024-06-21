@@ -50,7 +50,7 @@ export const router = createBrowserRouter([
         element: <CatsCard />
       },
       {
-        path: "/TodasMascotas",
+        path: "/adoptarmascotas",
         element: <TodasMascotas />
       },
 
