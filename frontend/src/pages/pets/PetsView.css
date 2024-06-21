@@ -1,0 +1,21 @@
+.pets-container {
+    align-items: center;
+
+}
+
+.pets-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px
+
+}
+
+.card{
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    width: 20%;
+    text-align: center;
+}
