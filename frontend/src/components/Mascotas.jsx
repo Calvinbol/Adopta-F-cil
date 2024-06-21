@@ -8,12 +8,15 @@ const Mascotas = () => {
             <h1>Mascotas en adopción</h1>
             <div className="mascotas-links">
                 <div className="mascota-card">
+                <Link to="/DogsCard" className="mascota-link">
                     <img src="../../public/perros.png" alt="Perros" />
-                    <Link to="/DogsCard" className="mascota-link">Perros</Link>
+                    Perros
+                    </Link>
                 </div>
                 <div className="mascota-card">
+                    <Link to="/CatsCard" className="mascota-link">
                     <img src="../../public/gatos.png" alt="Gatos" />
-                    <Link to="/CatsCard" className="mascota-link">Gatos</Link> 
+                    Gatos</Link> 
                 </div>
             </div>
             <Link to="/TodasMascotas"  button className="adopt-button">Ver todos</Link>
