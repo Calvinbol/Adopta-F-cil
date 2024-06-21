@@ -1,19 +1,6 @@
 const bcrypt = require('bcrypt');
 const Hostel = require('../models/hostel.model');
 
-// CREA ALBERGUE (POST)
-
-const createHostel = async (req, res) => {
-    try {
-        req.body.password = bcrypt.hashSync(req.body.password, 10);
-        const hostel = await Hostel.create(req.body);
-        return res.status(201).json(hostel);
-    } catch (error) {
-        console.log(error);
-        return res.status(500).send('>> Oops something went wrong, could not create hostel.');
-    }
-};
-
 // OBTENER TODOS LOS ALBERGUES (GET)
 
 const getHostels = async (req, res) => {
@@ -39,6 +26,32 @@ const getHostelById = async (req, res) => {
     } catch (error) {
         console.log(error);
         return res.status(500).send('>> Oops something went wrong, could not fetch hostel.');
+    }
+};
+
+async function getMyProfileByToken(req, res) {
+    try {
+
+        const user = await Hostel.findByPk(res.locals.user.id)
+
+        if (!user) return res.status(404).send('User not found!')
+
+        res.status(200).json(user)
+
+    } catch (error) {
+        res.status(500).send(error)
+    }
+}
+// CREA ALBERGUE (POST)
+
+const createHostel = async (req, res) => {
+    try {
+        req.body.password = bcrypt.hashSync(req.body.password, 10);
+        const hostel = await Hostel.create(req.body);
+        return res.status(201).json(hostel);
+    } catch (error) {
+        console.log(error);
+        return res.status(500).send('>> Oops something went wrong, could not create hostel.');
     }
 };
 
@@ -76,10 +89,14 @@ const deleteHostel = async (req, res) => {
     }
 };
 
+
+
+
 module.exports = {
-    createHostel,
     getHostels,
     getHostelById,
+    getMyProfileByToken,
+    createHostel,
     updateHostel,
     deleteHostel
 };
