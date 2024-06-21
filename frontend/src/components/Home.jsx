@@ -4,7 +4,7 @@ import "./Home.css";
 const Home = () => {
   const handleClick = () => {
     
-    console.log("Botón clickeado");
+   alert("Botón clickeado");
     
   };
 
