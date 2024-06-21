@@ -69,9 +69,11 @@ footer {
   padding: 20px;
   align-items: center;
   text-decoration: underline;
+  flex-wrap: wrap;
 
 }
 
 .tamañoimagen{
     width: 200px;
 }
+

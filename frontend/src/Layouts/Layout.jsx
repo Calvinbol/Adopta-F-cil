@@ -33,21 +33,21 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      <footer className="cabildodegrancanaria">
-        <a target="/home/reboot/code/Adopta-Facil/frontend/public/cabildodegranacanaria.png"></a>
-        
-        
-          <img
-            className="tamañoimagen"
-            src="/cabildodegranacanaria.png"
-            alt="Cabildo de Gran Canaria"
-          />
-          <div className="footer-social">
+      <footer className="cabildodegrancanariasinfondo">
+        <a target="/home/reboot/code/Adopta-Facil/frontend/public/cabildodegranacanariasinfondo.png"></a>
+
+        <img
+          className="tamañoimagen"
+          src="/cabildodegranacanaria.png"
+          alt="Cabildo de Gran Canaria"
+        />
+        <div className="footer-social">
           <div className="footer-links"></div>
-          
+
           <spam> Cookies </spam>
           <spam>Politica de privacidad </spam>
-          <spam> Aviso legal </spam><button
+          <spam> Aviso legal </spam>
+          <button
             href="https://www.facebook.com"
             target="/home/reboot/code/Adopta-Facil/frontend/public/facebook.png"
           ></button>
