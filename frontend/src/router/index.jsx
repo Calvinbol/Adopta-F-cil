@@ -9,6 +9,7 @@ import Login from '../pages/Login/Login'
 import DogsCard from '../components/DogsCard'
 import CatsCard from '../components/CatsCard'
 import TodasMascotas from '../components/TodasMascotas'
+import PetsView from '../pages/pets/PetsView'
 
 
 export const router = createBrowserRouter([
@@ -41,15 +42,15 @@ export const router = createBrowserRouter([
         element: <Adoptar/>
       },
       {
-        path: "/dogsCard",
-        element: <DogsCard />
+        path: "/adoptar/:animal",
+        element: <PetsView />
       },
       {
         path: "/catsCard",
         element: <CatsCard />
       },
       {
-        path: "/TodasMascotas",
+        path: "/adoptarmascotas",
         element: <TodasMascotas />
       },
 

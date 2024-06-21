@@ -17,7 +17,8 @@ const createPet = async (req, res) => {
 
 const getPets = async (req, res) => {
     try {
-        const pets = await Pet.findAll();
+        const query = req.query || {}
+        const pets = await Pet.findAll({where: query});
         return res.status(200).json(pets);
     } catch (error) {
         console.log(error);
