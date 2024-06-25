@@ -12,25 +12,25 @@ function LoginForm() {
   const navigate = useNavigate();
   const { hostel, setHostel } = useContext(HostelContext);
 
-  async function handleClick(event) {
-    event.preventDefault();
-    try {
-      let response = await login(email, password);
-      setErrs('');
-      console.log(response.name);
-      if (rememberMe) {
-        localStorage.setItem('token', response.token);
-      } else {
-        sessionStorage.setItem('token', response.token);
-      }
-      setHostel(response.hostel);
+    async function handleClick(event) {
+        event.preventDefault()
+        try {
+            let response = await login(email, password)
+            setErrs('')
+            console.log(response.name)
+            localStorage.setItem('token', response.token)
+            setHostel(response.hostel)
 
-      toast.success('Hello World ' + response.name);
-      navigate('/');
-    } catch (error) {
-      setErrs(error.message);
+
+            
+
+            toast.success('Hello World ' + response.name)
+            navigate('/') 
+        } catch (error) {
+            setErrs(error.message)
+        }
+
     }
-  }
 
   return (
     <div className="login-container">

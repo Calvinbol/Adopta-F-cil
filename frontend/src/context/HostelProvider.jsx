@@ -15,7 +15,7 @@ const HostelProvider = ({ children }) => {
           const response = await getMyProfileContext()
           setHostel(response)
         } catch (error) {
-          console.erro('Error fetching profile:', error)
+          console.error('Error fetching profile:', error)
           localStorage.removeItem('token')
         }
 
