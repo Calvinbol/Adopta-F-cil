@@ -22,7 +22,7 @@ body {
   margin: 100px;
   position: relative;
   z-index: 1;
-  font-size: 40px;
+  font-size: 50px;
   letter-spacing: 1px;
   line-height: 0.4;
   height: 400px;
@@ -35,6 +35,7 @@ body {
 
 .greyFont {
   color: grey;
+  font-size: 50px;
 }
 
 .blueBold {

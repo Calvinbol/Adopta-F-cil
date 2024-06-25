@@ -14,7 +14,7 @@ const Layout = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/adoptar">Adoptar</Link>
+              <Link to="/adoptar">Quienes Somos</Link>
             </li>
             <li>
               <Link to="/mascotas">Mascotas</Link>
