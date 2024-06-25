@@ -1,10 +1,58 @@
 import { useState } from "react";
+import Gestion from "./components/Gestion";
+import Table from "./components/Table";
+import AddModal from "./components/AddModal";
 import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const [pets, setPets] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPets, setSelectedPets] = useState([]);
 
-  return <></>;
-}
+  const handleAddPet = (newPet) => {
+    const currentDate = new Date();
+    const formattedDate = currentDate.toISOString().split("T")[0]; // Formato YYYY-MM-DD
+    const newPetWithIdAndDates = {
+      ...newPet,
+      id: pets.length + 1, // Generar ID simple basado en el número de mascotas
+      fecha: formattedDate,
+      fechaAdopcion: formattedDate,
+    };
+    setPets([...pets, newPetWithIdAndDates]);
+    setIsModalOpen(false);
+  };
+
+  const handleDeletePets = () => {
+    setPets(pets.filter((pet) => !selectedPets.includes(pet.id)));
+    setSelectedPets([]);
+  };
+
+  const toggleSelectPet = (id) => {
+    setSelectedPets((prevSelectedPets) =>
+      prevSelectedPets.includes(id)
+        ? prevSelectedPets.filter((petId) => petId !== id)
+        : [...prevSelectedPets, id]
+    );
+  };
+
+  return (
+    <div className="App">
+      <Gestion
+        onAddClick={() => setIsModalOpen(true)}
+        onDeleteClick={handleDeletePets}
+      />
+      <Table
+        pets={pets}
+        selectedPets={selectedPets}
+        toggleSelectPet={toggleSelectPet}
+      />
+      <AddModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onAddPet={handleAddPet}
+      />
+    </div>
+  );
+};
 
 export default App;

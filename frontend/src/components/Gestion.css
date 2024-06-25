@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+  .header h1 {
+    margin: 0;
+}
+
+  .header button {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 2em;
+    width: 45px;
+    height: 45px;
+    border: #004aad;
+    background-color: #004aad;
+}
+
+.gestion{
+  color: #004aad;
+}

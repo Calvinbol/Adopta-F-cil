@@ -25,7 +25,7 @@ function LoginForm() {
             
 
             toast.success('Hello World ' + response.name)
-            navigate('/') 
+            navigate('/usuario') 
         } catch (error) {
             setErrs(error.message)
         }
