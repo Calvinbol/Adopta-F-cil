@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import PropTypes from "prop-types";
 import "./Layout.css";
 
 const Layout = () => {
@@ -15,7 +14,7 @@ const Layout = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/adoptar">Adoptar es</Link>
+              <Link to="/adoptar">Adoptar</Link>
             </li>
             <li>
               <Link to="/mascotas">Mascotas</Link>
@@ -32,44 +31,11 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
-
-      <footer className="cabildodegrancanariasinfondo">
-        <a target="/home/reboot/code/Adopta-Facil/frontend/public/cabildodegranacanariasinfondo.png"></a>
-
-        <img
-          className="tamañoimagen"
-          src="/cabildodegranacanaria.png"
-          alt="Cabildo de Gran Canaria"
-        />
-        <div className="footer-social">
-          <div className="footer-links"></div>
-
-          <spam> Cookies </spam>
-          <spam>Politica de privacidad </spam>
-          <spam> Aviso legal </spam>
-          <button
-            href="https://www.facebook.com"
-            target="/home/reboot/code/Adopta-Facil/frontend/public/facebook.png"
-          ></button>
-          <img src="/facebook.png" alt="Facebook" />
-          <button
-            href="https://www.instagram.com"
-            target="/home/reboot/code/Adopta-Facil/frontend/public/instagram.png"
-          ></button>
-          <img src="/instagram.png" alt="Instagram" />
-          <button
-            href="https://www.tiktok.com"
-            target="/home/reboot/code/Adopta-Facil/frontend/public/tiktok.png"
-          ></button>
-          <img src="/tiktok.png" alt="TikTok" />
-        </div>
+      <footer>
+        <div className="footer"></div>
       </footer>
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

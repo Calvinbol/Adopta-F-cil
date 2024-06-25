@@ -5,7 +5,7 @@ const Adoption = require("../models/adoption.model");
 
 const createAdoption = async (req, res) => {
   try {
-    
+
     const adoption = await Adoption.create(req.body);
     return res.status(201).json(adoption);
   } catch (error) {

@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { signup } from "../../Services/auth.service";
 import { useNavigate } from "react-router-dom";
+import "./Signup.css";
 
 function Signup() {
   const [fullname, setFullname] = useState("");
   const [password, setPassword] = useState("");
   const [doublePass, setDoublePass] = useState("");
   const [email, setEmail] = useState("");
-  const [errs, setErrs] = useState(""); //Para mostrar si hay algún error
+  const [description, setDescription] = useState(""); // Nuevo estado para descripción
+  const [errs, setErrs] = useState(""); // Para mostrar si hay algún error
 
   const navigate = useNavigate();
 
@@ -15,18 +17,20 @@ function Signup() {
     event.preventDefault();
     if (password === doublePass) {
       try {
-        if (
-          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password)
-        ) {
-          await signup(email, fullname, password);
-          setErrs("");
-          alert("Chachi piruli");
+        // Validación de contraseña
+        if (/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[a-zA-Z]).{8,}$/.test(password)) {
+          // Validación de descripción no vacía
+          if (description.trim() === "") {
+            setErrs("Debes proporcionar una descripción del hostal");
+          } else {
+            await signup(email, fullname, password, description); // Envía también la descripción
+            setErrs("");
+            alert("Registro exitoso");
+            navigate("/login");
+          }
         } else {
-          setErrs(
-            "pass with at least 8 char: 1 caracter especial, 1 minuscula, 1 mayus"
-          );
+          setErrs("La contraseña debe tener al menos 8 caracteres: 1 caracter especial, 1 minúscula, 1 mayúscula");
         }
-        // Optionally, handle successful signup (e.g., display a success message or redirect)
       } catch (error) {
         setErrs(error.message);
       }
@@ -36,71 +40,51 @@ function Signup() {
   }
 
   return (
-    <>
-      <h1>SIGNUP</h1>
-      <button
-        onClick={function () {
-          navigate("/");
-        }}
-      >
-        VOLVER A HOME
-      </button>
+    <div className="signup-container">
       <form className="form">
+        <h2 className="form-title">Registro</h2>
+        <label className="form-label">Correo Electrónico:</label>
         <input
-          className="email"
+          className="form-input"
           placeholder="Introduce tu email"
           type="email"
-          onChange={function (event) {
-            setEmail(event.target.value);
-          }}
+          onChange={(event) => setEmail(event.target.value)}
         />
+        <label className="form-label">Nombre Completo:</label>
         <input
+          className="form-input"
           placeholder="Introduce tu nombre completo"
-          onChange={function (event) {
-            setFullname(event.target.value);
-          }}
+          onChange={(event) => setFullname(event.target.value)}
         />
+        <label className="form-label">Contraseña:</label>
         <input
+          className="form-input"
           placeholder="Introduce tu contraseña"
           type="password"
-          onChange={function (event) {
-            setPassword(event.target.value);
-          }}
+          onChange={(event) => setPassword(event.target.value)}
         />
-
-        {password}
+        <label className="form-label">Repite tu Contraseña:</label>
         <input
+          className="form-input"
           placeholder="Repite tu contraseña"
           type="password"
-          onChange={function (event) {
-            setDoublePass(event.target.value);
-          }}
+          onChange={(event) => setDoublePass(event.target.value)}
+        />
+        <label className="form-label">Descripción del Albergue:</label> {/* Nuevo campo */}
+        <textarea
+          className="form-input"
+          placeholder="Introduce la descripción del hostal"
+          onChange={(event) => setDescription(event.target.value)}
         />
 
-        {errs && <p className="error">{errs}</p>}
+        {errs && <p className="form-error">{errs}</p>}
 
-        <button onClick={handleClick}>Enviar</button>
+        <button className="form-button" onClick={handleClick}>Enviar</button>
 
-        <p>Tienes cuenta </p>
-        <a
-          onClick={function () {
-            navigate("/login");
-          }}
-        >
-          Haz click aquí
-        </a>
+        <p className="form-text">¿Ya tienes cuenta? <span className="form-link" onClick={() => navigate("/login")}>Inicia sesión</span></p>
       </form>
-
-      <button
-        onClick={function () {
-          navigate("/");
-        }}
-      >
-        VOLVER A HOME
-      </button>
-    </>
+    </div>
   );
 }
 
 export default Signup;
-

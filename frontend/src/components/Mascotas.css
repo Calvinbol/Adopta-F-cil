@@ -1,28 +1,22 @@
 .mascotas-container {
     text-align: center;
-    
 }
 
 h1 {
-    color: #004AAD;
-    font-size: 60px;
+    color: #004aad;
+    font-size: 3rem;
     margin-bottom: 5px;
-    /* Añadir un margen inferior para separación */
 }
 
 .mascotas-links {
     display: flex;
     justify-content: center;
     gap: 380px;
-    /* Mantener el gap entre los elementos */
     margin-bottom: 440px;
-    /* Añadir un margen inferior para separación del botón */
-    /* Esta es la sombra de PEDRO / Estefi */
 }
 
 .mascota-card {
     position: relative;
-    
 }
 
 .mascota-card img {
@@ -31,20 +25,17 @@ h1 {
     object-fit: cover;
     transition: transform 0.3s ease;
     margin-bottom: 1px;
-    /* Añadir margen inferior para separación */
 }
 
 .mascota-card img:hover {
     transform: scale(1.05);
-    filter: drop-shadow(20px 10px 4px hsl(240, 1%, 39%)); 
-
+    filter: drop-shadow(20px 10px 4px hsl(240, 1%, 39%));
 }
 
 .mascota-link {
     position: absolute;
     top: 1px;
     bottom: 10px;
-    /* Ajustar posición para mejorar el diseño */
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
@@ -55,7 +46,7 @@ h1 {
 }
 
 .adopt-button {
-    background-color: #004AAD;
+    background-color: #004aad;
     color: #ffffff;
     padding: 10px 30px;
     border: none;
@@ -64,11 +55,10 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 120px;
-    /* Añadir un margen superior para separación */
+    margin-top: 100px;
     text-decoration: none;
 }
 
 .adopt-button:hover {
-    background-color: hsl(214, 98%, 38%);
+    background-color: #4bb5cb;
 }
