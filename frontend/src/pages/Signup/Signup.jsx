@@ -29,7 +29,7 @@ function Signup() {
             await signup(email, fullname, password, address, phone, website, community, description); // Envía también la descripción
             setErrs("");
             alert("Registro exitoso");
-            navigate("/login");
+            navigate("/usuario");
           }
         
       } catch (error) {

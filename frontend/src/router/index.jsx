@@ -8,6 +8,7 @@ import Adoptar from '../components/Adoptar'
 import Login from '../pages/Login/Login'
 import PetsView from '../pages/pets/PetsView'
 import PetDetails from '../pages/PetDetails/PetDetails'
+import App from '../App'
 
 
 export const router = createBrowserRouter([
@@ -37,21 +38,24 @@ export const router = createBrowserRouter([
       },
       {
         path: "/adoptar",
-        element: <Adoptar />
+        element: <Adoptar />,
       },
       {
         path: "/adoptar/:animal",
-        element: <PetsView />
+        element: <PetsView />,
       },
       {
         path: "/adoptar/todas",
-        element: <PetsView />
+        element: <PetsView />,
       },
       {
-        path: '/adoptar/animal/:id', 
+        path: "/adoptar/animal/:id",
         element: <PetDetails />,
       },
-
+      {
+        path: "/usuario",
+        element: <App />,
+      },
     ],
   },
 ]);
