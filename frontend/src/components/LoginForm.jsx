@@ -18,7 +18,7 @@ function LoginForm() {
         try {
             let response = await login(email, password)
             setErrs('')
-            console.log(response.name)
+            console.log(response.name) 
             localStorage.setItem('token', response.token)
             setHostel(response.hostel)
 
@@ -31,7 +31,8 @@ function LoginForm() {
             setErrs(error.message)
         }
 
-    }
+    } 
+    console.log(hostel)
 
     return (
       <>
