@@ -47,19 +47,6 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
-.albergue-link {
-    text-align: right;
-}
-
-.albergue-link a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-.albergue-link a:hover {
-    color: #ffcc00;
-}
 
 footer {
   display: flex;
@@ -73,7 +60,34 @@ footer {
 
 }
 
-.tamañoimagen{
-    width: 200px;
+.footer-logo img {
+  width: 100px; /* Ajusta el tamaño del logo del footer */
+  
 }
 
+.footer-links {
+  display: flex;
+  gap: 100px; /* Espacio entre los elementos */
+  margin-top: 10px;
+}
+
+.footer-links span {
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  
+
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px; /* Espacio entre los iconos de redes sociales */
+  margin-top: 10px;
+  padding-left: 900px;
+  
+}
+
+.footer-social a img {
+  width: 30px; /* Ajusta el tamaño de los iconos de redes sociales */
+  height: 30px;
+}

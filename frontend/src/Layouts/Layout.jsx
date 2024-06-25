@@ -38,15 +38,17 @@ const Layout = () => {
 
         <img
           className="tamañoimagen"
-          src="/cabildodegranacanaria.png"
+          src="/cabildodegranacanariasinfondo.png"
           alt="Cabildo de Gran Canaria"
         />
         <div className="footer-social">
-          <div className="footer-links"></div>
+          <div className="footer-links">
 
           <spam> Cookies </spam>
           <spam>Politica de privacidad </spam>
           <spam> Aviso legal </spam>
+          </div>
+          <div>
           <button
             href="https://www.facebook.com"
             target="/home/reboot/code/Adopta-Facil/frontend/public/facebook.png"
@@ -61,7 +63,7 @@ const Layout = () => {
             href="https://www.tiktok.com"
             target="/home/reboot/code/Adopta-Facil/frontend/public/tiktok.png"
           ></button>
-          <img src="/tiktok.png" alt="TikTok" />
+          <img src="/tiktok.png" alt="TikTok" /></div>
         </div>
       </footer>
     </>
