@@ -30,15 +30,7 @@
   height: 500px; /* Manten la altura si es necesario */
 }
 
-.text {
-  margin: 100px;
-  position: relative;
-  z-index: 1;
-  font-size: 40px;
-  letter-spacing: 1px; /* Ajusta el espaciado entre letras */
-  line-height: 0.4; /* Ajusta la altura de línea para un mejor aspecto */
-  height: 500px; /* Manten la altura si es necesario */
-}
+
 
 .textoderecho {
   margin-right: 100px;
