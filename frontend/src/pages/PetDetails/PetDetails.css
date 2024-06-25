@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: "Openn Sans", Arial, sans-serif;
-    background-color: white;
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: #ffffff;
 }
 
 .pet-details {
@@ -10,32 +10,34 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     max-width: 600px;
-    margin: 20px auto;
+    margin: 40px auto;
     color: #0044ad;
     font-family: "Open Sans", sans-serif;
-    height: 70vh;
-    /* Ajusta la altura*/
+    height: auto;
 }
 
 .pet-details img {
-    max-width: 60%;
-    border-radius: 10px;
+    max-width: 85%;
+    border-radius: 5px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .pet-details h1 {
     color: #0044ad;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
 }
 
 .pet-details p {
     color: rgb(46, 46, 46);
     font-size: 16px;
-    margin: 5px 0;
+    margin: 10px 0;
+    text-align: center;
 }
 
 .adopt-button {
@@ -43,10 +45,11 @@ body {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 22px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
 .adopt-button:hover {

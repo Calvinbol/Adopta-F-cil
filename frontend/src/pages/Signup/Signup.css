@@ -57,7 +57,7 @@
     font-weight: bold;
     cursor: pointer;
     font-family: "Open Sans", sans-serif;
-    margin-top: 1px;
+    margin-top: 5px;
     /* Espacio superior para separar del contenido anterior */
 }
 
@@ -65,11 +65,12 @@
     background-color: #003a99;
 }
 
-.form-text {
+.form-text-final {
     color: rgb(46, 46, 46);
     text-align: center;
     margin-top: 10px;
     font-family: "Open Sans", sans-serif;
+    font-size: 20px;
 }
 
 .form-link {
