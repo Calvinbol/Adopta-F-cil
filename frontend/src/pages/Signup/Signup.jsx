@@ -131,15 +131,10 @@ function Signup() {
           onChange={(event) => setDescription(event.target.value)}
         />
         {errs && <p className="form-error">{errs}</p>}
-        <button className="form-button" onClick={handleClick}>
-          Enviar
-        </button>
-        <p className="form-text">
-          ¿Ya tienes cuenta?{" "}
-          <span className="form-link" onClick={() => navigate("/login")}>
-            Inicia sesión
-          </span>
-        </p>
+
+        <button className="form-button" onClick={handleClick}>Enviar</button>
+
+        <p className="form-text-final">¿Ya tienes cuenta? <span className="form-link" onClick={() => navigate("/login")}>Inicia sesión</span></p>
       </form>
     </div>
   );
