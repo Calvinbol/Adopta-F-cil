@@ -11,8 +11,8 @@
 
 .container {
 
-    width: 600px;
-    height: 500px;
+    width: 500px;
+    height: 425px;
     background-color: #43a3b6;
     border-radius: 15px;
     /* Ajusta este valor para cambiar la curvatura */
@@ -21,18 +21,19 @@
 }
 
 .container1 {
-    width: 600px;
-    height: 500px;
+    width: 500px;
+    height: 425px;
     background-color: #004aad;
     border-radius: 15px;
     /* Ajusta este valor para cambiar la curvatura */
     padding: 20px;
-    margin: 20px auto;
+    margin: auto;
 }
 
-.parrafo {
+.parrafo-adoptar {
     color: rgb(253, 251, 251);
     font-size: large;
+    font-weight: normal;
 
 }
 
