@@ -1,10 +1,72 @@
 .adoptar-background {
     display: flex;
+}
+
+.text {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(70vh - 10px);
-    background-image: url('../../public/AdoptarEs.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    color: aliceblue;
+}
+
+.container {
+
+    width: 600px;
+    height: 500px;
+    background-color: #43a3b6;
+    border-radius: 15px;
+    /* Ajusta este valor para cambiar la curvatura */
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    background-color: #004aad;
+    border-radius: 15px;
+    /* Ajusta este valor para cambiar la curvatura */
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.parrafo {
+    color: rgb(253, 251, 251);
+    font-size: large;
+
+}
+
+.textadoptar {
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.textcontainer {
+    font-size: 30px;
+    padding-top: 20px;
+    border-left: auto;
+    border-right: auto;
+    color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.iconperro {
+    height: 200px;
+    padding-left: 25px;
+
+}
+
+.h4 {
+    border-left: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size-adjust: 200px;
+
+
+}
+
+p {
+    font-size: x-large;
+    color: #574757;
+    font-family: 'Open Sans', sans-serif;
 }
