@@ -3,7 +3,7 @@ import Contacto from '../../components/Contacto'
 function Contact() {
   return (
     <>
-        <Contacto/>
+      <Contacto />
     </>
   )
 }

@@ -6,10 +6,8 @@ import Mascotas from '../components/Mascotas'
 import Contacto from '../components/Contacto'
 import Adoptar from '../components/Adoptar'
 import Login from '../pages/Login/Login'
-import DogsCard from '../components/DogsCard'
-import CatsCard from '../components/CatsCard'
-import TodasMascotas from '../components/TodasMascotas'
 import PetsView from '../pages/pets/PetsView'
+import PetDetails from '../pages/PetDetails/PetDetails'
 
 
 export const router = createBrowserRouter([
@@ -39,14 +37,20 @@ export const router = createBrowserRouter([
       },
       {
         path: "/adoptar",
-        element: <Adoptar/>
+        element: <Adoptar />
       },
       {
         path: "/adoptar/:animal",
         element: <PetsView />
       },
-     
-
+      {
+        path: "/adoptar/todas",
+        element: <PetsView />
+      },
+      {
+        path: '/adoptar/animal/:id', 
+        element: <PetDetails />,
+      },
 
     ],
   },

@@ -7,7 +7,7 @@ const Adoption = sequelize.define("adoption", {
   },
 },
   { timestamps: false }
-  
+
 );
 
 module.exports = Adoption;

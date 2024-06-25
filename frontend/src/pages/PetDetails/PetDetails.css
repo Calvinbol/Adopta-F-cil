@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: "Openn Sans", Arial, sans-serif;
+    background-color: white;
+}
+
+.pet-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    color: #0044ad;
+    font-family: "Open Sans", sans-serif;
+    height: 70vh;
+    /* Ajusta la altura*/
+}
+
+.pet-details img {
+    max-width: 60%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.pet-details h1 {
+    color: #0044ad;
+    margin-bottom: 10px;
+}
+
+.pet-details p {
+    color: rgb(46, 46, 46);
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.adopt-button {
+    background-color: #0044ad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.adopt-button:hover {
+    background-color: #003a8c;
+}
