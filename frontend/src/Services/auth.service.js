@@ -27,8 +27,6 @@ export async function signup(
   }
 }
 
-// Contraseña.1? Contraseña.2?
-
 export async function login(email, password) {
     try {
         const { data } = await api.post('/auth/login', {
