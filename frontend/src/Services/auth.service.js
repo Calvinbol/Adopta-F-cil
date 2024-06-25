@@ -1,17 +1,33 @@
 import { api } from "./config";
 
-export async function signup(email, fullname, password) {
-    try {
-        const response = await api.post('/auth/signup', {
-            email: email,
-            name: fullname,
-            password: password,
-        })
-        return response
-    } catch (error) {
-        throw new Error('Something went wrong')
-    }
+export async function signup(
+  email,
+  fullname,
+  password,
+  address,
+  phone,
+  website,
+  community,
+  description
+) {
+  try {
+    const response = await api.post("/auth/signup", {
+      email: email,
+      name: fullname,
+      password: password,
+      phone: phone,
+      address: address,
+      website: website,
+      autonomous_community: community,
+      description: description
+    });
+    return response;
+  } catch (error) {
+    throw new Error("Something went wrong");
+  }
 }
+
+// Contraseña.1? Contraseña.2?
 
 export async function login(email, password) {
     try {

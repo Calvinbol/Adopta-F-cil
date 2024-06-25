@@ -1,22 +1,26 @@
 .signup-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
     background-color: #ffffff;
 }
 
-.form {
+ .signup {
     background-color: #4bb5cb;
-    padding: 5px;
+    padding: 20px;
     /* Aumenta el espacio interno del formulario */
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
     /* Ancho máximo del formulario */
-    width: 100%;
+    width: 60%;
     /* Garantiza que ocupe todo el espacio disponible */
     font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .form-title {
@@ -29,9 +33,21 @@
 .form-label {
     color: rgb(46, 46, 46);
     font-weight: bold;
+    text-align: left;
+    width: 70%;
 }
 
-.form-input {
+.form-input2 {
+    width: 70%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 5px;
+    /* Espacio inferior para separar los campos */
+}
+
+.form-input3 {
     width: 100%;
     padding: 5px;
     border-radius: 10px;
@@ -76,4 +92,22 @@
     color: rgb(46, 46, 46);
     cursor: pointer;
     text-decoration: underline;
+}
+
+.pass{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 70%;
+}
+
+.divPass{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%
+}
+
+textarea{
+    resize: none;
 }
