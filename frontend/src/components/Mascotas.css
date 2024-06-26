@@ -1,11 +1,12 @@
 .mascotas-container {
     text-align: center;
+    
 }
 
 h1 {
     color: #004aad;
     font-size: 3rem;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .mascotas-links {

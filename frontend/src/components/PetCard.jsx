@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
@@ -10,15 +9,15 @@ import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
 
 export default function PetCard({ pet, onClick, showContactLink = false }) {
     return (
-        <Card sx={{ maxWidth: 345 }} onClick={onClick}>
+        <Card sx={{ maxWidth: 300 }} onClick={onClick}>
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="140"
+                    height="150"
                     image={pet.imageUrl}
                     alt={pet.name}
                 />
-                <CardContent>
+                <CardContent sx={{ height: 60, overflow: 'hidden' }}>
                     <Typography gutterBottom variant="h5" component="div">
                         {pet.name}
                     </Typography>
