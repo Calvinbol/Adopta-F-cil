@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
+import Avatar from '@mui/material/Avatar';
+import { deepOrange } from '@mui/material/colors';
+import { HostelContext } from "../context/hostelContext"; // Asegúrate de la ruta correcta
 import "./Layout.css";
 
 const Layout = () => {
+  const { hostel } = useContext(HostelContext);
+
   return (
     <>
       <header>
@@ -25,7 +30,15 @@ const Layout = () => {
           </ul>
         </nav>
         <div className="albergue-link">
-          <Link to="/login">Soy un albergue</Link>
+          {hostel ? (
+            <Link to="/usuario">
+              <Avatar sx={{ bgcolor: deepOrange[500] }}>
+                {hostel.name.charAt(0).toUpperCase()}
+              </Avatar>
+            </Link>
+          ) : (
+            <Link to="/login">Soy un albergue</Link>
+          )}
         </div>
       </header>
       <main>
