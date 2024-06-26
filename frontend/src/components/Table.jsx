@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import "./Table.css";
-import { useEffect } from "react";
-import { getPetAdoption } from "../Services/adoption.service";
 
 const Table = ({ pets, selectedPets, toggleSelectPet }) => {
 
