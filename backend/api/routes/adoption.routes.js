@@ -1,4 +1,5 @@
 const route = require('express').Router()
+const { checkAuth } = require('../middlewares/auth.middlewares')
 
 const {
   createAdoption,
@@ -9,7 +10,7 @@ const {
 } = require("../controllers/adoption.controllers");
 
 route.get("/", getAdoptions)
-route.get("/:id", getAdoptionById)
+route.get("/:id", checkAuth, getAdoptionById)
 route.post("/", createAdoption)
 route.put("/:id", updateAdoption)
 route.delete("/:id", deleteAdoption)

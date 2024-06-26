@@ -32,11 +32,11 @@ const getHostelById = async (req, res) => {
 async function getMyProfileByToken(req, res) {
     try {
 
-        const user = await Hostel.findByPk(res.locals.user.id)
+        const hostel = await Hostel.findByPk(res.locals.hostel.id)
 
-        if (!user) return res.status(404).send('User not found!')
+        if (!hostel) return res.status(404).send('Hostel not found!')
 
-        res.status(200).json(user)
+        return res.status(200).json(hostel)
 
     } catch (error) {
         res.status(500).send(error)

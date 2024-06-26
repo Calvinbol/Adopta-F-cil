@@ -1,4 +1,5 @@
 const Pet = require('../models/pet.models')
+const Adoption = require('../models/adoption.model')
 
 // CREA MASCOTA (POST)
 
@@ -24,6 +25,26 @@ const getPets = async (req, res) => {
         console.log(error);
         return res.status(500).send('>> Oops something went wrong, could not fetch pets.');
     }
+};
+
+const getPetsByHostel = async (req, res) => {
+  try {
+    const pets = await Pet.findAll({
+      where: { hostelId: res.locals.hostel.id },
+      include: [
+        {
+          model: Adoption,
+          attributes: ["date_adoption"], // Aquí incluyes los campos que deseas de la tabla Adoption
+        },
+      ],
+    });
+    return res.status(200).json(pets);
+  } catch (error) {
+    console.log(error);
+    return res
+      .status(500)
+      .send(">> Oops something went wrong, could not fetch pets.");
+  }
 };
 
 // OBTIENE UNA MASCOTA POR ID 
@@ -81,6 +102,7 @@ const deletePet = async (req, res) => {
 module.exports = {
     createPet,
     getPets,
+    getPetsByHostel,
     getPetById,
     updatePet,
     deletePet

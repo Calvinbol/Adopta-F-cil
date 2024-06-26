@@ -17,3 +17,31 @@ export async function getPetById(id) {
         throw new Error(error.message);
     }
 }
+
+export async function getPetsByHostel() {
+  try {
+    const { data } = await api.get(`/pet/me`, {
+      headers: {
+        Authorization: localStorage.getItem('token')
+      }
+    });
+    return data;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+}
+
+
+
+export async function addPet(newPetData) {
+  try {
+    const { data } = await api.post("/pet", newPetData, {
+      headers: {
+        Authorization: localStorage.getItem("token")
+      }
+    });
+    return data;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+}
