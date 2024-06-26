@@ -6,7 +6,7 @@
     background-color: #ffffff;
 }
 
- .signup {
+.signup {
     background-color: #4bb5cb;
     padding: 20px;
     /* Aumenta el espacio interno del formulario */
@@ -36,6 +36,19 @@
     text-align: left;
     width: 70%;
 }
+
+.label-registro {
+    font-weight: bold;
+    align-self: self-start;
+    margin-left: 165px;
+
+}
+
+
+
+
+
+
 
 .form-input2 {
     width: 70%;
@@ -95,20 +108,20 @@
     text-decoration: underline;
 }
 
-.pass{
+.pass {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     width: 70%;
 }
 
-.divPass{
+.divPass {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 50%
 }
 
-textarea{
+textarea {
     resize: none;
 }

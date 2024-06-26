@@ -44,14 +44,14 @@ function Signup() {
     <div className="signup-container">
       <form className=" signup">
         <h2 className="form-title">Registro</h2>
-        <label className="form-label">Correo Electrónico:</label>
+        <label className="label-registro">Correo Electrónico:</label>
         <input
           className="form-input2"
           placeholder="Introduce tu email"
           type="email"
           onChange={(event) => setEmail(event.target.value)}
         />
-        <label className="form-label">Nombre Completo:</label>
+        <label className="label-registro">Nombre Completo:</label>
         <input
           className="form-input2"
           placeholder="Introduce tu nombre completo"
@@ -78,7 +78,7 @@ function Signup() {
             />
           </div>
         </div>
-        <label className="form-label">Dirección:</label>
+        <label className="label-registro">Dirección:</label>
         <input
           className="form-input2"
           placeholder="Introduce tu dirección"
@@ -116,13 +116,13 @@ function Signup() {
             />
           </div>
         </div>
-        <label className="form-label">Sitio web:</label>
+        <label className="label-registro">Sitio web:</label>
         <input
           className="form-input2"
           placeholder="Introduce tu sitio web"
           onChange={(event) => setWebsite(event.target.value)}
         />
-        <label className="form-label">Descripción del Albergue:</label>{" "}
+        <label className="label-registro">Descripción del Albergue:</label>{" "}
         {/* Nuevo campo */}
         <textarea
           className="form-input2"
