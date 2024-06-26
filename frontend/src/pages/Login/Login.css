@@ -1,31 +1,26 @@
-/* Estilo para el contenedor principal */
 .login-container {
     display: flex;
     height: 100vh;
     background-color: #ffffff;
 }
 
-/* Estilo para la imagen de la izquierda */
+
 .login-image {
     flex: 0.8;
     background-image: url('../../../public/albergue.png');
-    /* Asegúrate de colocar la ruta correcta de tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin-top: -100px;
 }
 
-/* Estilo para el contenedor del formulario */
 .form-container {
     flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-top: -250px;
 }
 
-/* Estilo para el formulario */
 .form {
     background-color: #4bb5cb;
     width: 500px;
@@ -37,7 +32,6 @@
     gap: 15px;
     font-family: "Open Sans", sans-serif;
     align-items: center;
-    /* Centra el contenido del formulario */
 }
 
 .form-title {
