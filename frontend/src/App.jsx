@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Gestion from "./components/Gestion";
 import Table from "./components/Table";
 import AddModal from "./components/AddModal";
 import "./App.css";
+import { getPetsByHostel } from "./Services/pets.service";
 
 const App = () => {
   const [pets, setPets] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPets, setSelectedPets] = useState([]);
+
+
+
+useEffect(() => {
+  async function getAllPets() {
+    const response = await getPetsByHostel();
+    setPets(response)
+    console.log(response)
+  }
+  getAllPets()
+}, [])
+
+
 
   const handleAddPet = (newPet) => {
     const currentDate = new Date();
@@ -16,7 +30,7 @@ const App = () => {
       ...newPet,
       id: pets.length + 1, // Generar ID simple basado en el número de mascotas
       fecha: formattedDate,
-      fechaAdopcion: formattedDate,
+     
     };
     setPets([...pets, newPetWithIdAndDates]);
     setIsModalOpen(false);

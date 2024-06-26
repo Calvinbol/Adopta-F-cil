@@ -13,7 +13,7 @@ function checkAuth(req, res, next) {
       const hostel = await Hostel.findOne({where:{email: result.email}})
       if (!hostel) return res.status(401).send('hostel not found')
 
-      res.locals.hostel = Hostel
+      res.locals.hostel = hostel
 
       next()
     }

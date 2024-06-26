@@ -1,19 +1,18 @@
+// AddModal.js
 import { useState } from "react";
 import PropTypes from "prop-types";
 import "./AddModal.css";
+import { addPet } from "../Services/pets.service";
 
 const AddModal = ({ isOpen, onClose, onAddPet }) => {
   const [petData, setPetData] = useState({
-    nombre: "",
-    tipo: "",
-    raza: "",
-    edad: "",
-    genero: "",
-    talla: "",
-    historia: "",
-    fecha: "",
-    id: "",
-    fechaApopcion: "",
+    name: "",
+    type: "",
+    race: "",
+    age: "",
+    gender: "",
+    size: "",
+    description: "",
   });
 
   const handleChange = (e) => {
@@ -24,21 +23,19 @@ const AddModal = ({ isOpen, onClose, onAddPet }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onAddPet(petData);
-    setPetData({
-      nombre: "",
-      tipo: "",
-      raza: "",
-      edad: "",
-      genero: "",
-      talla: "",
-      historia: "",
-      fecha: "",
-      id: "",
-      fechaApopcion: "",
-    });
+    onAddPet(petData)
+    try {
+
+      const newPet = await addPet(petData); // Llama a la función para añadir mascota con los datos del formulario
+      onAddPet(newPet); // Actualiza la lista de mascotas con la nueva mascota añadida
+      
+      onClose(); // Cierra el modal después de añadir la mascota
+    } catch (error) {
+      console.error("Error adding pet:", error);
+    }
   };
 
   if (!isOpen) return null;
@@ -54,16 +51,16 @@ const AddModal = ({ isOpen, onClose, onAddPet }) => {
           <label className="TextModal">Nombre:</label>
           <input
             type="text"
-            name="nombre"
-            value={petData.nombre}
+            name="name"
+            value={petData.name}
             onChange={handleChange}
             required
           />
 
           <label className="TextModal">Tipo:</label>
           <select
-            name="tipo"
-            value={petData.tipo}
+            name="type"
+            value={petData.type}
             onChange={handleChange}
             required
           >
@@ -75,21 +72,21 @@ const AddModal = ({ isOpen, onClose, onAddPet }) => {
           <label className="TextModal">Raza:</label>
           <input
             type="text"
-            name="raza"
-            value={petData.raza}
+            name="race"
+            value={petData.race}
             onChange={handleChange}
           />
 
           <label className="TextModal">Edad:</label>
           <input
             type="text"
-            name="edad"
-            value={petData.edad}
+            name="age"
+            value={petData.age}
             onChange={handleChange}
           />
 
           <label className="TextModal">Género:</label>
-          <select name="genero" value={petData.genero} onChange={handleChange}>
+          <select name="gender" value={petData.gender} onChange={handleChange}>
             <option value="">Seleccione...</option>
             <option value="macho">Macho</option>
             <option value="hembra">Hembra</option>
@@ -98,15 +95,15 @@ const AddModal = ({ isOpen, onClose, onAddPet }) => {
           <label className="TextModal">Talla:</label>
           <input
             type="text"
-            name="talla"
-            value={petData.talla}
+            name="size"
+            value={petData.size}
             onChange={handleChange}
           />
 
           <label className="TextModal">Historia:</label>
           <textarea
-            name="historia"
-            value={petData.historia}
+            name="description"
+            value={petData.description}
             onChange={handleChange}
           ></textarea>
 

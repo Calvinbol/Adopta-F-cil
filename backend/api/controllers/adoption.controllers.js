@@ -38,7 +38,7 @@ const getAdoptionById = async (req, res) => {
     if (adoption) {
       return res.status(200).json(adoption);
     } else {
-      return res.status(404).send(">> adoption not found.");
+      return res.status(204).send("");
     }
   } catch (error) {
     console.log(error);
