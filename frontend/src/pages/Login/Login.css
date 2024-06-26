@@ -1,12 +1,30 @@
+/* Estilo para el contenedor principal */
 .login-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
+    height: 100vh;
     background-color: #ffffff;
 }
 
+/* Estilo para la imagen de la izquierda */
+.login-image {
+    flex: 0.8;
+    background-image: url('../../../public/albergue.png');
+    /* Asegúrate de colocar la ruta correcta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -100px;
+}
+
+/* Estilo para el contenedor del formulario */
+.form-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para el formulario */
 .form {
     background-color: #4bb5cb;
     width: 500px;
@@ -17,6 +35,8 @@
     flex-direction: column;
     gap: 15px;
     font-family: "Open Sans", sans-serif;
+    align-items: center;
+    /* Centra el contenido del formulario */
 }
 
 .form-title {
@@ -27,6 +47,8 @@
 .form-label {
     color: rgb(46, 46, 46);
     font-weight: bold;
+    align-self: flex-start;
+    /* Alinea las etiquetas a la izquierda */
 }
 
 .form-input {
@@ -42,6 +64,8 @@
     align-items: center;
     color: rgb(46, 46, 46);
     font-family: "Open Sans", sans-serif;
+    align-self: flex-start;
+    /* Alinea el checkbox a la izquierda */
 }
 
 .form-checkbox input {
@@ -60,7 +84,7 @@
     color: white;
     border: none;
     border-radius: 22px;
-    padding: 10px 20px;
+    padding: 10px 50px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -78,7 +102,6 @@
     font-family: "Open Sans", sans-serif;
     text-decoration: none;
 }
-
 
 .form-link:hover {
     text-decoration: underline;

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
-import { deepOrange } from '@mui/material/colors';
+import { deepPurple } from '@mui/material/colors';
 import { HostelContext } from "../context/hostelContext"; // Asegúrate de la ruta correcta
 import "./Layout.css";
 
@@ -31,8 +31,16 @@ const Layout = () => {
         </nav>
         <div className="albergue-link">
           {hostel ? (
-            <Link to="/usuario">
-              <Avatar sx={{ bgcolor: deepOrange[500] }}>
+            <Link to="/usuario" className="avatar-link">
+              <Avatar
+                sx={{
+                  bgcolor: deepPurple[500],
+                  '&:hover': {
+                    bgcolor: deepPurple[500],
+                    cursor: 'pointer'
+                  },
+                }}
+              >
                 {hostel.name.charAt(0).toUpperCase()}
               </Avatar>
             </Link>

@@ -89,5 +89,22 @@ footer p {
 
 main {
     margin-top: 40px;
-    /* Ajusta este valor según la altura del encabezado */
+    
+}
+
+.avatar-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.avatar-link:hover {
+    text-decoration: none;
+    background-color: transparent;
+    
+}
+
+.avatar-link .MuiAvatar-root:hover {
+    background-color: transparent !important;
+    /* Fuerza la eliminación del hover en Avatar */
 }
