@@ -21,10 +21,10 @@ const App = () => {
 
   const handleAddPet = (newPet) => {
     const currentDate = new Date();
-    const formattedDate = currentDate.toISOString().split("T")[0]; // Formato YYYY-MM-DD
+    const formattedDate = currentDate.toISOString().split("T")[0]; 
     const newPetWithIdAndDates = {
       ...newPet,
-      id: pets.length + 1, // Generar ID simple basado en el número de mascotas
+      id: pets.length + 1, 
       fecha: formattedDate,
     };
     setPets([...pets, newPetWithIdAndDates]);
