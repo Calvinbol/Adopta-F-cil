@@ -1,26 +1,37 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+ }
+
+.gestion {
+  font-size: 36px;
+  color: #333;
 }
 
-  .header h1 {
-    margin: 0;
+.gestion-buttons {
+  display: flex;
+  gap: 10px;
 }
 
-  .header button {
-    margin-left: 10px;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 2em;
-    width: 45px;
-    height: 45px;
-    border: #004aad;
-    background-color: #4BB5CB;
+.gestion-buttons button {
+  background-color: #0044ad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.gestion{
-  color: #004aad;
+.gestion-buttons button:hover {
+  background-color: #003a99;
+}
+
+.gestion-buttons button svg {
+  margin-right: 5px;
 }
