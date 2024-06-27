@@ -32,7 +32,6 @@ export async function getPetsByHostel() {
 }
 
 
-
 export async function addPet(newPetData) {
   try {
     const { data } = await api.post("/pet", newPetData, {

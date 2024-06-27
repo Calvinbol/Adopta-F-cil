@@ -34,7 +34,7 @@ const getPetsByHostel = async (req, res) => {
       include: [
         {
           model: Adoption,
-          attributes: ["date_adoption"], // Aquí incluyes los campos que deseas de la tabla Adoption
+          attributes: ["date_adoption"], 
         },
       ],
     });
