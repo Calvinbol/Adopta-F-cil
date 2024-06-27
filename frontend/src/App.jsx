@@ -10,18 +10,14 @@ const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPets, setSelectedPets] = useState([]);
 
-
-
-useEffect(() => {
-  async function getAllPets() {
-    const response = await getPetsByHostel();
-    setPets(response)
-    console.log(response)
-  }
-  getAllPets()
-}, [])
-
-
+  useEffect(() => {
+    async function getAllPets() {
+      const response = await getPetsByHostel();
+      setPets(response);
+      console.log(response);
+    }
+    getAllPets();
+  }, []);
 
   const handleAddPet = (newPet) => {
     const currentDate = new Date();
@@ -30,7 +26,6 @@ useEffect(() => {
       ...newPet,
       id: pets.length + 1, // Generar ID simple basado en el número de mascotas
       fecha: formattedDate,
-     
     };
     setPets([...pets, newPetWithIdAndDates]);
     setIsModalOpen(false);
